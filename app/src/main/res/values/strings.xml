@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dialogs</string>
+    <string name="btn_warning_for_delete">Предупреждение перед удалением</string>
 </resources>

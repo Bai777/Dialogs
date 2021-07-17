@@ -13,4 +13,11 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Btns" parent="Theme.Dialogs">
+        <item name="android:textSize">@dimen/btn_textSize</item>
+        <item name="android:textColor">#CC4848</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/btns</item>
+    </style>
 </resources>

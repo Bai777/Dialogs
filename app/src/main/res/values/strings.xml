@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Dialogs</string>
     <string name="btn_warning_for_delete">Предупреждение перед удалением</string>
+    <string name="exclamation">Важное сообщение!</string>
+    <string name="press_button">Вы действительно хотите удалить файл?</string>
+    <string name="btn_delete">Удалить</string>
+    <string name="btn_cancellation">Отмена</string>
+    <string name="btn_cancel">Закрыть</string>
+
 </resources>

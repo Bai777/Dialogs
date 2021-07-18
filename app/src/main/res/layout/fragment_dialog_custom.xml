@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="70dp"
+    tools:context=".DialogCustomFragment">
+
+    <EditText
+        style="@style/Btns"
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_name_activity"
+        android:ems="20"
+        android:inputType="textPersonName" />
+
+    <Button
+        style="@style/Btns"
+        android:id="@+id/btn_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/done"/>
+
+
+</LinearLayout>

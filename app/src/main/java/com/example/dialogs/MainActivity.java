@@ -1,17 +1,22 @@
 package com.example.dialogs;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnAlertDialog;
+    TextView textViewPersonName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +29,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initBtns() {
         btnAlertDialog = findViewById(R.id.btn_warning_from_delete);
         btnAlertDialog.setOnClickListener(this);
+        textViewPersonName = findViewById(R.id.textViewPersonName);
+        textViewPersonName.setOnClickListener(fragmentCustomAction);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -66,5 +74,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 throw new IllegalStateException("Unexpected value: " + v);
         }
+    }
+
+    private View.OnClickListener fragmentCustomAction = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            DialogFragment dialogCustom = new DialogCustomFragment();
+            dialogCustom.show(getSupportFragmentManager(), "key");
+        }
+    };
+
+
+
+
+    // Метод для общения с диалоговыми окнами
+    protected void onDialogResult(String resultDialog){
+//        Toast.makeText(this, "Выбрано " + resultDialog, Toast.LENGTH_SHORT).show();
+        textViewPersonName.setText(resultDialog);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("text", textViewPersonName.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        textViewPersonName.setText(savedInstanceState.getString("text"));
     }
 }

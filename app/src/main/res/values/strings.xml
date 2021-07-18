@@ -7,4 +7,11 @@
     <string name="btn_cancellation">Отмена</string>
     <string name="btn_cancel">Закрыть</string>
 
+
+
+    <string name="done">готово</string>
+    <string name="hint_name_activity">Текст</string>
+    <string name="press_to_me">Нажми на меня</string>
+
+
 </resources>

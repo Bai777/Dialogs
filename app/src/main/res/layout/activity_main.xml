@@ -13,9 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/btns_margin"
-        android:text="@string/btn_warning_for_delete"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/btn_warning_for_delete" />
+
+    <TextView
+        style="@style/Btns"
+        android:id="@+id/textViewPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/press_to_me"
+        android:layout_margin="@dimen/btns_margin"/>
 
 </LinearLayout>
